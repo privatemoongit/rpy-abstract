@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/example_action_with_bar.rpy", line 28: expected a keyword argument or child statement.
-    "LOGG example_action_with_bar_screen"
-    ^
+File "game/screens/example_action_with_bar.rpy", line 2: u'style' is not a keyword argument or valid child for the screen statement.
+    style "inherited_style"
+         ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Tue Apr 17 11:28:14 2018
+Tue Apr 17 11:43:33 2018
