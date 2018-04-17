@@ -1,4 +1,4 @@
-Tue Apr 17 09:04:30 2018
+Tue Apr 17 11:30:40 2018
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
  
@@ -7,7 +7,7 @@ Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.07s
+Loading script took 0.09s
 Loading save slot metadata. took 0.00s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -19,30 +19,30 @@ Backing up script files to '/home/gkiss/.renpy/backups/abstract':
 Dump and make backups. took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.01s
+Initial gc. took 0.02s
 DPI scale factor: 1.000000
-Creating interface object took 0.02s
+Creating interface object took 0.03s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.06s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.05s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.02s
 
-primary display bounds: (0, 0, 1920, 1080)
+primary display bounds: (0, 0, 3840, 1080)
 swap interval: 1 frames
 Windowed mode.
 Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
 Vendor: 'Intel Open Source Technology Center'
 Renderer: 'Mesa DRI Intel(R) Kabylake GT1.5 '
 Version: '3.0 Mesa 17.2.8'
-Display Info: <Info({'blit_sw_CC': False, 'refresh_rate': 0, 'bitsize': 32, 'wm': True, 'losses': (0, 0, 0, 8), 'hw': False, 'masks': (16711680, 65280, 255, 0), 'current_h': 1080, 'current_w': 1920, 'shifts': (16, 8, 0, 0), 'blit_sw_A': False, 'blit_hw': False, 'blit_sw': False, 'bytesize': 4, 'blit_hw_CC': False, 'blit_hw_A': False, 'video_mem': 268435456})>
+Display Info: <Info({'blit_sw_CC': False, 'refresh_rate': 0, 'bitsize': 32, 'wm': True, 'losses': (0, 0, 0, 8), 'hw': False, 'masks': (16711680, 65280, 255, 0), 'current_h': 1080, 'current_w': 3840, 'shifts': (16, 8, 0, 0), 'blit_sw_A': False, 'blit_hw': False, 'blit_sw': False, 'bytesize': 4, 'blit_hw_CC': False, 'blit_hw_A': False, 'video_mem': 268435456})>
 Extensions:
     
     GL_3DFX_texture_compression_FXT1
@@ -297,11 +297,18 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 0.690552949905s
+Total time until interface ready: 0.667574882507s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.003479 seconds.
-- Frame drawn at 0.005951 seconds.
-- Frame drawn at 0.008185 seconds.
-- Frame drawn at 0.010191 seconds.
-- 0.010191 seconds to render 5 frames.
+- Frame drawn at 0.004542 seconds.
+- Frame drawn at 0.007032 seconds.
+- Frame drawn at 0.010563 seconds.
+- Frame drawn at 0.019614 seconds.
+- 0.019614 seconds to render 5 frames.
+Cleaning stores took 0.00s
+Init translation took 0.14s
+Build styles took 0.01s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
