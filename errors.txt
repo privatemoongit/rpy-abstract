@@ -1,0 +1,26 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+The label solar_system is defined twice, at
+  File "game/screens/exampl_map.rpyc", line 14 and
+  File "game/screens/example_map.rpy", line 14.
+
+The label mercury is defined twice, at
+  File "game/screens/exampl_map.rpyc", line 17 and
+  File "game/screens/example_map.rpy", line 17.
+
+The label venus is defined twice, at
+  File "game/screens/exampl_map.rpyc", line 21 and
+  File "game/screens/example_map.rpy", line 21.
+
+The label earth is defined twice, at
+  File "game/screens/exampl_map.rpyc", line 25 and
+  File "game/screens/example_map.rpy", line 25.
+
+The label mars is defined twice, at
+  File "game/screens/exampl_map.rpyc", line 31 and
+  File "game/screens/example_map.rpy", line 31.
+
+Ren'Py Version: Ren'Py 6.99.14.3.3347
+Tue Apr 17 08:05:55 2018
