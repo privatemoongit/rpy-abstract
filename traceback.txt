@@ -1,34 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/screens/exampl_map.rpy", line 15, in script
-    call screen planets #Displaying the imagemap
-  File "renpy/common/000statements.rpy", line 519, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-Exception: Screen planets is not known.
-
+  File "game/screens/example_screen_script.rpy", line 7, in script
+    call screen example_map_screen
+ScriptError: could not find label 'mars_ending'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/screens/exampl_map.rpy", line 15, in script
-    call screen planets #Displaying the imagemap
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1828, in execute
-    self.call("execute")
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1816, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/statements.py", line 177, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 519, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/exports.py", line 2659, in call_screen
-    show_screen(_screen_name, _transient=True, *args, **kwargs)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 1060, in show_screen
-    raise Exception("Screen %s is not known.\n" % (name[0],))
-Exception: Screen planets is not known.
-
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/bootstrap.py", line 306, in bootstrap
+    renpy.main.main()
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/main.py", line 513, in main
+    run(restart)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/main.py", line 139, in run
+    renpy.execution.run_context(True)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/execution.py", line 846, in run_context
+    context.run()
+  File "game/screens/example_screen_script.rpy", line 7, in script
+    call screen example_map_screen
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/script.py", line 873, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'mars_ending'.
 
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
 abstract 1.0
-Tue Apr 17 08:02:01 2018
+Tue Apr 17 09:03:30 2018

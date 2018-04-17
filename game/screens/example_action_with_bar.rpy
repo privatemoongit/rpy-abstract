@@ -7,7 +7,6 @@ style centered_param_style is centered_style:
     xmaximum 300
     box_wrap True
 
-define total = 0
 init python:
     def incrementTotal():
         global total

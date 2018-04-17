@@ -1,5 +1,3 @@
-default earth_destroyed = False
-
 screen example_map_screen: #Preparing the imagemap
     imagemap:
         ground "/screens/s_elements/map_solar/planet_map.jpg"
@@ -23,11 +21,11 @@ label venus:
     jump solar_system
 
 label earth:
-    "It is Earth."
+    "It is Earth. changevar: [earth_destroyed]"
     "As soon as you quit it, it is destroyed!"
     $ earth_destroyed = True
     jump solar_system
 
 label mars:
-    "It is Mars."
+    "It is Mars._exit"
     jump example_screen_script_screen_end_label
