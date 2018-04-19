@@ -1,8 +1,8 @@
 label start:
     scene bg green
     "LOGG:script.rpy: begin"
-   # "LOGG:script.rpy: jump example_screen_script_screen"
-    jump example_screen_script_screen
+    #call screen player_character_sheet_screen
+    jump city_map_label
     label end_label:
     "LOGG:script.rpy: end_label [pc.place] [pc.energy]"
     return

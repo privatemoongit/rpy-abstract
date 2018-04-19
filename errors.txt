@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/example_map.rpy", line 12: image expects a non-empty block.
-    image "/screens/s_elements/action_with_bar/buttons/button_selected_idle.png":
-                                                                                 ^
+File "game/character/player_character_sheet.rpy", line 25: textbutton expects a non-empty block.
+    textbutton "+":
+                   ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Thu Apr 19 07:48:57 2018
+Thu Apr 19 17:45:56 2018

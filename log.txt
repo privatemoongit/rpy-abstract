@@ -1,4 +1,4 @@
-Thu Apr 19 07:59:55 2018
+Thu Apr 19 18:11:10 2018
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
  
@@ -7,7 +7,7 @@ Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.07s
+Loading script took 0.17s
 Loading save slot metadata. took 0.00s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -297,11 +297,36 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 0.698681116104s
+Total time until interface ready: 0.822999000549s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.004070 seconds.
-- Frame drawn at 0.006477 seconds.
-- Frame drawn at 0.012341 seconds.
-- Frame drawn at 0.030801 seconds.
-- 0.030801 seconds to render 5 frames.
+- Frame drawn at 0.005157 seconds.
+- Frame drawn at 0.010053 seconds.
+- Frame drawn at 0.027587 seconds.
+- Frame drawn at 0.043217 seconds.
+- 0.043217 seconds to render 5 frames.
+Cleaning stores took 0.00s
+Init translation took 0.16s
+Build styles took 0.01s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+
+Full traceback:
+  File "game/screens/example_map.rpy", line 30, in script
+    $pc.decEnergy(1)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 862, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/python.py", line 1888, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/screens/example_map.rpy", line 30, in <module>
+    $pc.decEnergy(1)
+AttributeError: 'Player' object has no attribute 'decEnergy'
+
+While running game code:
+  File "game/screens/example_map.rpy", line 30, in script
+    $pc.decEnergy(1)
+  File "game/screens/example_map.rpy", line 30, in <module>
+    $pc.decEnergy(1)
+AttributeError: 'Player' object has no attribute 'decEnergy'

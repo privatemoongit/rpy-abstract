@@ -1,5 +1,5 @@
 init python:
-    class Character:
+    class Player:
         default_level = 1
         default_experiance = 0
         default_energy = 3
@@ -48,8 +48,14 @@ init python:
             self.sneak = self.default_sneak
             self.speech = self.default_speech
 
+        def getPlace(self):
+            return self.place
+
+        def changePlace(self, place):
+            self.place = place
+
         def level_up(self):
-            self.inc_max_energy()
+            self.max_energy += 1
             self.inc_skillpoints()
 
         def inc_experiance(self, ammount):
@@ -60,7 +66,9 @@ init python:
                 self.experiance -= 100
 
         def inc_max_energy(self):
-            self.max_energy += 1
+            if self.skillpoints > 0 :
+                self.skillpoints-=1
+                self.max_energy +=1
 
         def inc_skillpoints(self):
             self.skillpoints += 1
@@ -113,7 +121,10 @@ init python:
             self.willpower -= ammount
 
         def inc_willpower(self, ammount):
-            self.willpower += ammount
+            if self.skillpoints > 0 :
+                self.skillpoints-=1
+                self.willpower +=1
+
 
         def dec_moral(self, ammount):
             self.morals -= ammount
