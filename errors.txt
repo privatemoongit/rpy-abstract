@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/character/player_character_sheet.rpy", line 25: textbutton expects a non-empty block.
-    textbutton "+":
-                   ^
+File "game/screens/example_map.rpy", line 4: u'pc' is not a keyword argument or valid child for the screen statement.
+    pc.place =1
+      ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Thu Apr 19 17:45:56 2018
+Thu Apr 19 19:28:18 2018

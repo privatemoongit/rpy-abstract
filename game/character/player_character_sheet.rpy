@@ -1,4 +1,5 @@
-
+label player_character_sheet_screen_label:
+call screen player_character_sheet_screen
 screen player_character_sheet_screen:
     add "screens/s_elements/action_with_bar/backgrounds/bg_bluescreen.jpg"
     vbox:
@@ -52,8 +53,16 @@ screen player_character_sheet_screen:
             label "speech [pc.speech]"
             if pc.skillpoints > 0 :
                 textbutton "+" action Function(pc.inc_speech)
+        hbox:
+            label "speech [pc.place]"
 
-    textbutton "Return":
-        action Return()
-        xalign 05
-        yalign 0.95
+        if pc.place == "city_map_label":
+            textbutton "Return":
+                xalign 05
+                yalign 0.95
+                action Jump("city_map_label")
+        else:
+            textbutton "Return":
+                xalign 05
+                yalign 0.95
+                action Return()

@@ -1,26 +1,52 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/screens/example_map.rpy", line 30, in script
-    $pc.decEnergy(1)
-  File "game/screens/example_map.rpy", line 30, in <module>
-    $pc.decEnergy(1)
-AttributeError: 'Player' object has no attribute 'decEnergy'
+After initialization, but before game start.
+  File "game/character/player_character_sheet.rpy", line 3, in analyze_screen
+    screen player_character_sheet_screen:
+  File "game/character/player_character_sheet.rpy", line 3, in analyze
+    screen player_character_sheet_screen:
+  File "game/character/player_character_sheet.rpy", line 3, in analyze
+    screen player_character_sheet_screen:
+  File "game/character/player_character_sheet.rpy", line 5, in analyze
+    vbox:
+  File "game/character/player_character_sheet.rpy", line 5, in analyze
+    vbox:
+  File "game/character/player_character_sheet.rpy", line 59, in analyze
+    if pc.getPlace === 1:
+SyntaxError: invalid syntax (player_character_sheet.rpy, line 59)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/screens/example_map.rpy", line 30, in script
-    $pc.decEnergy(1)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 862, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/python.py", line 1888, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/screens/example_map.rpy", line 30, in <module>
-    $pc.decEnergy(1)
-AttributeError: 'Player' object has no attribute 'decEnergy'
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/bootstrap.py", line 306, in bootstrap
+    renpy.main.main()
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/main.py", line 513, in main
+    run(restart)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/main.py", line 82, in run
+    renpy.display.screen.analyze_screens()
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 870, in analyze_screens
+    s.ast.analyze_screen()
+  File "game/character/player_character_sheet.rpy", line 3, in analyze_screen
+    screen player_character_sheet_screen:
+  File "game/character/player_character_sheet.rpy", line 3, in analyze
+    screen player_character_sheet_screen:
+  File "game/character/player_character_sheet.rpy", line 3, in analyze
+    screen player_character_sheet_screen:
+  File "game/character/player_character_sheet.rpy", line 5, in analyze
+    vbox:
+  File "game/character/player_character_sheet.rpy", line 5, in analyze
+    vbox:
+  File "game/character/player_character_sheet.rpy", line 59, in analyze
+    if pc.getPlace === 1:
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/pyanalysis.py", line 529, in is_constant_expr
+    node, literal = ccache.ast_eval_literal(expr)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/pyanalysis.py", line 683, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/python.py", line 674, in py_compile
+    raise e
+SyntaxError: invalid syntax (player_character_sheet.rpy, line 59)
 
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
 abstract 1.0
-Thu Apr 19 18:11:25 2018
+Thu Apr 19 19:28:00 2018
