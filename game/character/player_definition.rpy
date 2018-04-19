@@ -1,39 +1,107 @@
 init python:
-    class Player:
-        def __init__(self, level, experiance, energy, willpower, morals, money):
-            self.level = level
-            self.experiance = experiance
-            self.energy = energy
-            self.max_energy = energy
-            self.willpower = willpower
-            self.morals = morals
-            self.money = money
-            self.place = "home"
+    class Character:
+        default_level = 1
+        default_experiance = 0
+        default_energy = 3
+        default_willpower = 1
+        default_morals = 5
+        default_histeria = 0
 
-        def getPlace(self):
-            return self.place
-        def changePlace(self, place):
-            self.place = place
+        default_money = 300
+        default_place = "home"
+        default_inventory = []
 
-        def levelUp(self):
-            self.incMaxEnergy()
+        default_skillpoints = 0
 
-        def incExperiance(self, ammount):
+        default_computers = 1
+        default_fittness = 0
+        default_sxskill = 0
+        default_security = 0
+        default_sneak = 0
+        default_speech = 0
+
+        def __init__(self):
+            self.init_atributes()
+            self.init_baiscs()
+            self.init_skills()
+
+        def init_atributes(self):
+            self.level = self.default_level
+            self.experiance = self.default_experiance
+            self.energy = self.default_energy
+            self.max_energy = self.energy
+            self.willpower = self.default_willpower
+            self.morals = self.default_morals
+            self.histeria = self.default_histeria
+
+        def init_baiscs(self):
+            self.money = self.default_money
+            self.place = self.default_place
+            self.inventory = self.default_inventory
+
+        def init_skills(self):
+            self.skillpoints = self.default_skillpoints
+            self.computers = self.default_computers
+            self.fittness = self.default_fittness
+            self.sxskills = self.default_sxskill
+            self.security = self.default_security
+            self.sneak = self.default_sneak
+            self.speech = self.default_speech
+
+        def level_up(self):
+            self.inc_max_energy()
+            self.inc_skillpoints()
+
+        def inc_experiance(self, ammount):
             self.experiance += ammount
-            if (self.checkLevelUp()):
+            while self.experiance >= 100:
                 self.level += 1
-                self.levelUp()
+                self.level_up()
+                self.experiance -= 100
 
-        def incMaxEnergy(self):
+        def inc_max_energy(self):
             self.max_energy += 1
 
-        def reEnergy(self, ammount):
+        def inc_skillpoints(self):
+            self.skillpoints += 1
+
+        def inc_computers(self):
+            if self.skillpoints > 0 :
+                self.skillpoints-=1
+                self.computers +=1
+
+        def inc_fittness(self):
+            if self.skillpoints > 0 :
+                self.skillpoints-=1
+                self.fittness +=1
+
+        def inc_sxskills(self):
+            if self.skillpoints > 0 :
+                self.skillpoints-=1
+                self.sxskills +=1
+
+        def inc_security(self):
+            if self.skillpoints > 0 :
+                self.skillpoints-=1
+                self.security +=1
+
+        def inc_sneak(self):
+            if self.skillpoints > 0 :
+                self.skillpoints-=1
+                self.sneak +=1
+
+        def inc_speech(self):
+            if self.skillpoints > 0 :
+                self.skillpoints-=1
+                self.speech +=1
+
+        def re_energy(self, ammount):
             if self.max_energy - self.energy - ammount >= 0:
                 self.energy += ammount
             else:
                 self.energy = self.max_energy
 
-        def decEnergy(self, ammount):
+        def dec_energy(self, ammount):
             self.energy -= ammount
             if self.energy > 0:
                 return True
@@ -41,46 +109,42 @@ init python:
                 self.energy = 0
                 return False
 
-        def decWillpower(self, ammount):
+        def dec_willpower(self, ammount):
             self.willpower -= ammount
 
-        def incWillpower(self, ammount):
+        def inc_willpower(self, ammount):
             self.willpower += ammount
 
-        def decMoral(self, ammount):
+        def dec_moral(self, ammount):
             self.morals -= ammount
 
-        def incMoral(self, ammount):
+        def inc_moral(self, ammount):
             self.morals += ammount
 
-        def incMoney(self, ammount):
+        def dec_histeria(self, ammount):
+            self.histeria -= ammount
+
+        def inc_histeria(self, ammount):
+            self.histeria += ammount
+
+        def inc_money(self, ammount):
             self.money += ammount
 
-        def decMoney(self, ammount):
+        def dec_money(self, ammount):
             if self.money - ammount >= 0:
                 self.money -= ammount
                 return True
             else:
                 return False
 
-        def checkLevelUp(self):
-            if(self.experiance) > 100 and self.level <= 1:
-                return True
-            elif(self.experiance) > 200 and self.level <= 2:
-                return True
-            elif(self.experiance) > 400 and self.level <= 3:
-                return True
-            elif(self.experiance) > 800 and self.level <= 4:
-                return True
-            elif(self.experiance) > 1600 and self.level <= 5:
-                return True
-            elif(self.experiance) > 3200 and self.level <= 6:
-                return True
-            elif(self.experiance) > 6400 and self.level <= 7:
-                return True
-            elif(self.experiance) > 12800 and self.level <= 8:
-                return True
-            elif(self.experiance) > 25600 and self.level <= 9:
-                return True
-            elif(self.experiance) > 51200 and self.level <= 10:
-                return True
+    class Consumable:
+        def __init__(self, img, name, ammount):
+            self.img = img
+            self.name = name
+            self.ammount = ammount
+
+        def use(self, target):
+            target.inventory.remove(self)
+            target.re_energy(self.ammount)
+            #global selected_item
+            #selected_item = None
