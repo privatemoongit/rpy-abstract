@@ -1,31 +1,18 @@
 screen example_map_screen: #Preparing the imagemap
     imagemap:
-        ground "/screens/s_elements/map_solar/planet_map.jpg"
-        hover "/screens/s_elements/map_solar/planet_map_hover.png"
+        ground "/screens/s_elements/map_city/city_map.jpg"
+        hover "/screens/s_elements/map_city/city_map_hover.jpg"
 
-        hotspot (62, 399, 90, 91) clicked Jump("mercury")
-        hotspot (227, 302, 141, 137) clicked Jump("venus")
-        if not earth_destroyed:
-            hotspot (405, 218, 164, 118) clicked Jump("earth")
-        hotspot (591, 78, 123, 111) clicked Jump("mars")
-
-label solar_system:
+        hotspot (540, 240, 120, 60) clicked Jump("home")
+        hotspot (520, 375, 120, 60) clicked Jump("clinic")
+ 
+label city_map_label:
 call screen example_map_screen #Displaying the imagemap
 
-label mercury:
-    "It is Mercury."
-    jump solar_system
+label home:
+    "It is Home."
+    jump city_map_label
 
-label venus:
-    "It is Venus."
-    jump solar_system
-
-label earth:
-    "It is Earth. changevar: [earth_destroyed]"
-    "As soon as you quit it, it is destroyed!"
-    $ earth_destroyed = True
-    jump solar_system
-
-label mars:
-    "It is Mars._exit"
-    jump example_screen_script_screen_end_label
+label clinic:
+    "It is the clinic."
+    jump city_map_label
