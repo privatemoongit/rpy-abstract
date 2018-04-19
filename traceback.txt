@@ -1,52 +1,68 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/character/player_character_sheet.rpy", line 3, in analyze_screen
-    screen player_character_sheet_screen:
-  File "game/character/player_character_sheet.rpy", line 3, in analyze
-    screen player_character_sheet_screen:
-  File "game/character/player_character_sheet.rpy", line 3, in analyze
-    screen player_character_sheet_screen:
-  File "game/character/player_character_sheet.rpy", line 5, in analyze
-    vbox:
-  File "game/character/player_character_sheet.rpy", line 5, in analyze
-    vbox:
-  File "game/character/player_character_sheet.rpy", line 59, in analyze
-    if pc.getPlace === 1:
-SyntaxError: invalid syntax (player_character_sheet.rpy, line 59)
+While running game code:
+  File "game/screens/example_map.rpy", line 22, in script
+    
+  File "renpy/common/000statements.rpy", line 519, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/screens/example_map.rpy", line 3, in execute
+    screen example_map_screen: #Preparing the imagemap
+  File "game/screens/example_map.rpy", line 3, in execute
+    screen example_map_screen: #Preparing the imagemap
+  File "game/screens/example_map.rpy", line 18, in execute
+    image "/screens/s_elements/action_with_bar/buttons/button_selected_idle.png"
+TypeError: 'float' object is not iterable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/bootstrap.py", line 306, in bootstrap
-    renpy.main.main()
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/main.py", line 513, in main
-    run(restart)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/main.py", line 82, in run
-    renpy.display.screen.analyze_screens()
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 870, in analyze_screens
-    s.ast.analyze_screen()
-  File "game/character/player_character_sheet.rpy", line 3, in analyze_screen
-    screen player_character_sheet_screen:
-  File "game/character/player_character_sheet.rpy", line 3, in analyze
-    screen player_character_sheet_screen:
-  File "game/character/player_character_sheet.rpy", line 3, in analyze
-    screen player_character_sheet_screen:
-  File "game/character/player_character_sheet.rpy", line 5, in analyze
-    vbox:
-  File "game/character/player_character_sheet.rpy", line 5, in analyze
-    vbox:
-  File "game/character/player_character_sheet.rpy", line 59, in analyze
-    if pc.getPlace === 1:
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/pyanalysis.py", line 529, in is_constant_expr
-    node, literal = ccache.ast_eval_literal(expr)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/pyanalysis.py", line 683, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/python.py", line 674, in py_compile
-    raise e
-SyntaxError: invalid syntax (player_character_sheet.rpy, line 59)
+  File "game/screens/example_map.rpy", line 22, in script
+    
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1828, in execute
+    self.call("execute")
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1816, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/statements.py", line 177, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 519, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/exports.py", line 2664, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2635, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3019, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 420, in visit_all
+    callback(self)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3019, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 430, in per_interact
+    self.update()
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 611, in update
+    self.screen.function(**self.scope)
+  File "game/screens/example_map.rpy", line 3, in execute
+    screen example_map_screen: #Preparing the imagemap
+  File "game/screens/example_map.rpy", line 3, in execute
+    screen example_map_screen: #Preparing the imagemap
+  File "game/screens/example_map.rpy", line 18, in execute
+    image "/screens/s_elements/action_with_bar/buttons/button_selected_idle.png"
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/sl2/sldisplayables.py", line 436, in sl2add
+    rv = Transform(child=d, **kwargs)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/transform.py", line 611, in __init__
+    setattr(self.state, k, v)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/transform.py", line 371, in set_pos
+    self.xpos, self.ypos = value
+TypeError: 'float' object is not iterable
 
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
 abstract 1.0
-Thu Apr 19 19:28:00 2018
+Thu Apr 19 21:39:18 2018

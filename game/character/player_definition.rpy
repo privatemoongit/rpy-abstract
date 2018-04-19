@@ -1,7 +1,7 @@
 init python:
     class Player:
         default_level = 1
-        default_experiance = 0
+        default_experiance = 200
         default_energy = 3
         default_willpower = 1
         default_morals = 5
@@ -11,7 +11,7 @@ init python:
         default_place = "home"
         default_inventory = []
 
-        default_skillpoints = 0
+        default_skillpoints = 2
 
         default_computers = 1
         default_fittness = 0

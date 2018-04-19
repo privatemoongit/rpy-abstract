@@ -9,12 +9,15 @@ screen example_map_screen: #Preparing the imagemap
         hotspot (540, 240, 120, 60) clicked Jump("home")
         hotspot (520, 375, 120, 60) clicked Jump("clinic")
         hotspot (1200, 50, 200, 200) clicked Jump("player_character_sheet_screen_label")
+
     vbox:
         hbox:
             label "energy:"
             for i in range (0, pc.energy):
                 image "/screens/s_elements/action_with_bar/buttons/button_selected_idle.png"
-
+    image "gui/button/choice_hover_background.png":
+        size(200,100)
+        pos(1200,50)
 label city_map_label:
 call screen example_map_screen #Displaying the imagemap
 

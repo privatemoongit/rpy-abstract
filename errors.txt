@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/example_map.rpy", line 4: u'pc' is not a keyword argument or valid child for the screen statement.
-    pc.place =1
-      ^
+File "game/screens/example_map.rpy", line 6: u'size' is not a keyword argument or valid child for the imagemap statement.
+    ground "/screens/s_elements/map_city/city_map.jpg" size(1280, 720)
+                                                           ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Thu Apr 19 19:28:18 2018
+Thu Apr 19 21:33:37 2018
