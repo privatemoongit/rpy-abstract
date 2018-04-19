@@ -4,7 +4,7 @@ screen example_action_with_bar_screen:
     elif total % 2 == 0:
         add "screens/s_elements/action_with_bar/backgrounds/bg_greenscreen.jpg"
     hbox:
-        style "inherited_style"
+        style "action_screen_bar"
         bar:
             bar_vertical True
             value total

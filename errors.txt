@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/example_action_with_bar.rpy", line 2: u'style' is not a keyword argument or valid child for the screen statement.
-    style "inherited_style"
-         ^
+File "game/screens/example_map.rpy", line 12: image expects a non-empty block.
+    image "/screens/s_elements/action_with_bar/buttons/button_selected_idle.png":
+                                                                                 ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Tue Apr 17 11:43:33 2018
+Thu Apr 19 07:48:57 2018
