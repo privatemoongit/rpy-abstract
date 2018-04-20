@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/example_map.rpy", line 6: u'size' is not a keyword argument or valid child for the imagemap statement.
-    ground "/screens/s_elements/map_city/city_map.jpg" size(1280, 720)
-                                                           ^
+File "game/screens/map_building.rpy", line 13: expected a keyword argument or child statement.
+    $pc.changePlace("abstract_home")
+    ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Thu Apr 19 21:33:37 2018
+Fri Apr 20 07:53:07 2018

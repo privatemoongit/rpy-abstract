@@ -61,6 +61,11 @@ screen player_character_sheet_screen:
                 xalign 05
                 yalign 0.95
                 action Jump("city_map_label")
+        elif pc.place == "abstract_map_screen_label":
+            textbutton "Return":
+                xalign 05
+                yalign 0.95
+                action Jump("abstract_map_screen_label")
         else:
             textbutton "Return":
                 xalign 05
