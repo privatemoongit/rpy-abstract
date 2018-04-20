@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/map_building.rpy", line 13: expected a keyword argument or child statement.
-    $pc.changePlace("abstract_home")
-    ^
+File "game/screens/example_action_with_bar.rpy", line 14: expected a keyword argument, colon, or end of line.
+    image = "button_bar_idle"
+          ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Fri Apr 20 07:53:07 2018
+Fri Apr 20 18:55:22 2018

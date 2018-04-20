@@ -1,8 +1,8 @@
 screen example_action_with_bar_screen:
     if total % 2 == 1 :
-        add "screens/s_elements/action_with_bar/backgrounds/bg_bluescreen.jpg"
+        add "img_bluescreen_background"
     elif total % 2 == 0:
-        add "screens/s_elements/action_with_bar/backgrounds/bg_greenscreen.jpg"
+        add "img_greencreen_background"
     hbox:
         style "action_screen_bar"
         bar:
@@ -11,10 +11,14 @@ screen example_action_with_bar_screen:
             range 4
             xysize(25,200)
         if total < 5:
-            imagebutton auto "/screens/s_elements/action_with_bar/buttons/button_%s.png":
+            imagebutton:
+                idle "button_bar_idle"
+                hover "button_bar_hover"
                 action Function(incrementTotal)
         else:
-            imagebutton auto "/screens/s_elements/action_with_bar/buttons/button_selected_%s.png":
+            imagebutton:
+                idle "button_bar_idle"
+                hover "button_bar_hover"
                 action Jump("example_action_with_bar_screen_end_label")
 
 label example_action_with_bar_screen_end_label:

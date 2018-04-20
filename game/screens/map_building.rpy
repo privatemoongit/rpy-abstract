@@ -1,40 +1,41 @@
-image bg abstract_map = "/images/map/player_map.png"
+image bg abstract_map = "img_player_map"
 
-screen abstract_map_screen: #Preparing the imagemap
+screen abstract_map_screen:
     $pc.changePlace("abstract_map_screen_label")
-    image "/images/map/player_map.png"
+    image "img_player_map"
 
     vbox:
         hbox:
             label "energy:"
             for i in range (0, pc.energy):
-                image "/screens/s_elements/action_with_bar/buttons/button_selected_idle.png"
-    imagebutton auto "images/icons/icons8-home-24_%s.png":
+                image "icon_cs_energie"
+    imagebutton:
+        idle "icon_cs_map_home_idle"
+        hover "icon_cs_map_home_hover"
         action Jump("abstract_home")
         pos(540,240)
     imagebutton auto "images/icons/icons8-medical-doctor-64_%s.png":
         action Jump("abstract_clinic")
         pos(520,375)
+#CHARACTER_SHEET
     imagebutton auto "/screens/s_elements/action_with_bar/buttons/button_selected_%s.png":
         action Jump("player_character_sheet_screen_label")
         pos(1200,50)
-label abstract_map_screen_label:
-call screen abstract_map_screen #Displaying the imagemap
 
-#scene bg background_map
+label abstract_map_screen_label:
+call screen abstract_map_screen
+
 label abstract_home:
     scene bg abstract_map
-    $pc.changePlace("abstract_home")
     "It is Home."
     jump end_label
 
 label abstract_clinic:
-    scene bg abstract_map
+    scene bg img_player_map
     if pc.energy < 1:
         "You are to tired have to go home"
         jump abstract_map_screen_label
     else:
         "It is the clinic"
         $pc.dec_energy(1)
-        $pc.changePlace("abstract_clinic")
         jump abstract_map_screen_label

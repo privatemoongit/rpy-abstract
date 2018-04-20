@@ -8,7 +8,7 @@ init python:
         default_histeria = 0
 
         default_money = 300
-        default_place = "home"
+        default_place = "abstract_map_screen_label"
         default_inventory = []
 
         default_skillpoints = 2
