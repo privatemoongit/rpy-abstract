@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/example_action_with_bar.rpy", line 14: expected a keyword argument, colon, or end of line.
-    image = "button_bar_idle"
-          ^
+File "game/screens/test_sex_screen.rpy", line 3: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation.
+    if pc.energy < 1:
+    ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Fri Apr 20 18:55:22 2018
+Sat Apr 21 16:51:35 2018

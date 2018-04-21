@@ -1,4 +1,5 @@
-image bg abstract_map = "img_player_map"
+label abstract_map_screen_label:
+call screen abstract_map_screen
 
 screen abstract_map_screen:
     $pc.changePlace("abstract_map_screen_label")
@@ -24,8 +25,12 @@ screen abstract_map_screen:
         action Jump("player_character_sheet_screen_label")
         pos(1200,50)
 
-label abstract_map_screen_label:
-call screen abstract_map_screen
+    imagebutton:
+        idle "button_bar_idle"
+        hover "button_bar_hover"
+        action Jump("test_sex_with_bar_screen_label")
+        pos(700,500)
+
 
 label abstract_home:
     scene bg abstract_map

@@ -1,4 +1,4 @@
-Sat Apr 21 14:51:15 2018
+Sat Apr 21 17:14:38 2018
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
  
@@ -7,8 +7,8 @@ Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata. took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.00s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.04s
@@ -29,7 +29,7 @@ Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.06s
 Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
+Save pyanalysis. took 0.12s
 Save bytecode. took 0.05s
 Running _start took 0.00s
 Performance test:
@@ -37,8 +37,8 @@ Interface start took 0.02s
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Windowed mode.
-Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
+Fullscreen mode.
+Screen sizes: virtual=(1280, 720) physical=(1920, 1080) drawable=(1920, 1080)
 Vendor: 'Intel Open Source Technology Center'
 Renderer: 'Mesa DRI Intel(R) Kabylake GT1.5 '
 Version: '3.0 Mesa 17.2.8'
@@ -297,11 +297,18 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 0.783257961273s
+Total time until interface ready: 0.872585058212s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.004055 seconds.
-- Frame drawn at 0.006265 seconds.
-- Frame drawn at 0.008644 seconds.
-- Frame drawn at 0.010301 seconds.
-- 0.010301 seconds to render 5 frames.
+- Frame drawn at 0.009164 seconds.
+- Frame drawn at 0.023036 seconds.
+- Frame drawn at 0.038088 seconds.
+- Frame drawn at 0.054961 seconds.
+- 0.054961 seconds to render 5 frames.
+Cleaning stores took 0.00s
+Init translation took 0.16s
+Build styles took 0.01s
+Load screen analysis took 0.07s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s

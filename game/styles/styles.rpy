@@ -1,4 +1,3 @@
 style action_screen_bar:
-    xalign 0.5
-    yalign 0.5
+    pos(1000,300)
     spacing 50

@@ -2,7 +2,7 @@ label player_character_sheet_screen_label:
 call screen player_character_sheet_screen
 
 screen player_character_sheet_screen:
-    add "img_character_sheet_bg"
+    add "img_character_sheet_dna_bg"
     vbox:
         xmaximum 300
         spacing 1
