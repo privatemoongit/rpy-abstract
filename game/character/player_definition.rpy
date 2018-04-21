@@ -120,7 +120,7 @@ init python:
         def dec_willpower(self, ammount):
             self.willpower -= ammount
 
-        def inc_willpower(self, ammount):
+        def inc_willpower(self):
             if self.skillpoints > 0 :
                 self.skillpoints-=1
                 self.willpower +=1

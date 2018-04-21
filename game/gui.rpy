@@ -23,10 +23,10 @@ init python:
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#cccc00'
+define gui.accent_color = '#000080'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#000080'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
@@ -48,8 +48,8 @@ define gui.muted_color = '#515100'
 define gui.hover_muted_color = '#7a7a00'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#ffffff'
-define gui.interface_text_color = '#ffffff'
+define gui.text_color = '#000080'
+define gui.interface_text_color = '#000080'
 
 
 ## Fonts and Font Sizes ########################################################
@@ -468,6 +468,3 @@ init python:
 
         gui.nvl_button_width = 1240
         gui.nvl_button_xpos = 20
-
-
-

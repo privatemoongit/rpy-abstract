@@ -18,7 +18,9 @@ screen abstract_map_screen:
         action Jump("abstract_clinic")
         pos(520,375)
 #CHARACTER_SHEET
-    imagebutton auto "/screens/s_elements/action_with_bar/buttons/button_selected_%s.png":
+    imagebutton:
+        idle "button_bar_idle"
+        hover "button_bar_hover"
         action Jump("player_character_sheet_screen_label")
         pos(1200,50)
 

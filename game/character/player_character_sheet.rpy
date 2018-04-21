@@ -2,7 +2,7 @@ label player_character_sheet_screen_label:
 call screen player_character_sheet_screen
 
 screen player_character_sheet_screen:
-    add "img_cs_background"
+    add "img_character_sheet_bg"
     vbox:
         xmaximum 300
         spacing 1
@@ -28,7 +28,7 @@ screen player_character_sheet_screen:
         label "money: [pc.money]"
         vbox:
             label "where am I : [pc.place]"
-            image "icon_map_home_idle"
+            image "icon_cs_map_home_idle"
 
         label "Skills: "
         label "skillpoints: [pc.skillpoints]"
