@@ -57,7 +57,6 @@ screen test_sex_with_bar_screen_2:
                 action Function(incrementTotal)
         else:
             imagebutton:
-
                 idle "button_bar_idle"
                 hover "button_bar_hover"
                 action [Function(nullTotal), Jump("test_sex_with_bar_screen_label_3")]

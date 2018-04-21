@@ -1,19 +1,17 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/character/player_character_sheet.rpy", line 2, in script
-    call screen player_character_sheet_screen
+While loading <'Image' u'game/images/icons/hospital_idle.jpg'>:
+  File "game/screens/map_building.rpy", line 2, in script
+    call screen abstract_map_screen
   File "renpy/common/000statements.rpy", line 519, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-  File "renpy/common/00action_other.rpy", line 506, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-TypeError: inc_willpower() takes exactly 2 arguments (1 given)
+IOError: Couldn't find file 'game/images/icons/hospital_idle.jpg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/character/player_character_sheet.rpy", line 2, in script
-    call screen player_character_sheet_screen
+  File "game/screens/map_building.rpy", line 2, in script
+    call screen abstract_map_screen
   File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1828, in execute
     self.call("execute")
   File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1816, in call
@@ -28,33 +26,55 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2635, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3437, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 689, in event
-    rv = self.child.event(ev, x, y, st)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/behavior.py", line 906, in event
-    return handle_click(self.clicked)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/behavior.py", line 841, in handle_click
-    rv = run(action)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/behavior.py", line 315, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00action_other.rpy", line 506, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-TypeError: inc_willpower() takes exactly 2 arguments (1 given)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3118, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2041, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 485, in renpy.display.render.render_screen
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 661, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/behavior.py", line 724, in render
+    rv = super(Button, self).render(width, height, st, at)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 1116, in render
+    st, at)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/image.py", line 414, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/image.py", line 229, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/im.py", line 580, in render
+    return cache.get(self, render=True)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/im.py", line 266, in get
+    surf = image.load()
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/im.py", line 625, in load
+    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/loader.py", line 555, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'game/images/icons/hospital_idle.jpg'.
 
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
 abstract 1.0
-Sat Apr 21 14:48:45 2018
+Sat Apr 21 19:34:05 2018

@@ -15,7 +15,9 @@ screen abstract_map_screen:
         hover "icon_cs_map_home_hover"
         action Jump("abstract_home")
         pos(540,240)
-    imagebutton auto "images/icons/icons8-medical-doctor-64_%s.png":
+    imagebutton:
+        idle "icon_map_hostipal_idle"
+        hover "icon_map_hostipal_hover"
         action Jump("abstract_clinic")
         pos(520,375)
 #CHARACTER_SHEET
