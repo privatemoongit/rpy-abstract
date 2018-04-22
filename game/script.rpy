@@ -1,5 +1,5 @@
 label start:
-    scene bg green
+    scene bg img_bluescreen_background
     "LOGG:script.rpy: begin"
 #   call screen example_action_with_bar_screen
     jump abstract_map_screen_label

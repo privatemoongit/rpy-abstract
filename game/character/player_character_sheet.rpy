@@ -7,10 +7,11 @@ screen player_character_sheet_screen:
         xmaximum 300
         spacing 1
         label "Character Details" xalign 0.5
-        grid pc.level 1:
-            for i in range (0, pc.level):
-                image "icon_cs_level"
-        label "level: [pc.level]"
+        hbox:
+            label "level: [pc.level]"
+            for i in range (0, pc.level+2):
+                image "ci_level_idle"
+
         label "experiance: [pc.experiance] / 100"
         hbox:
             label "energy: [pc.energy] / [pc.max_energy]"
@@ -28,14 +29,15 @@ screen player_character_sheet_screen:
         label "money: [pc.money]"
         vbox:
             label "where am I : [pc.place]"
-            image "icon_cs_map_home_idle"
+            image "mi_home_hover"
 
         label "Skills: "
         label "skillpoints: [pc.skillpoints]"
         hbox:
             label "computers [pc.computers]"
             if pc.skillpoints > 0 :
-                textbutton "+" action Function(pc.inc_computers)
+                imagebutton auto "cb_plus_%s":
+                    action Function(pc.inc_computers)
         hbox:
             label "fittness [pc.fittness]"
             if pc.skillpoints > 0 :
@@ -57,8 +59,6 @@ screen player_character_sheet_screen:
             if pc.skillpoints > 0 :
                 textbutton "+" action Function(pc.inc_speech)
 
-    imagebutton:
-        idle "button_bar_idle"
-        hover "button_bar_hover"
+    imagebutton auto "cb_back_%s":
         pos(1100,600)
         action Jump(pc.place)

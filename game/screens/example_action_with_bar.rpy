@@ -12,8 +12,8 @@ screen example_action_with_bar_screen:
             xysize(25,200)
         if total < 5:
             imagebutton:
-                idle "button_bar_idle"
-                hover "button_bar_hover"
+                idle "ai_bar_button_idle"
+                hover "ai_bar_button_hover"
                 action Function(incrementTotal)
         else:
             imagebutton:

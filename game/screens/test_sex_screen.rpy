@@ -22,16 +22,10 @@ screen test_sex_with_bar_screen:
             range 5
             xysize(25,200)
         if total < 5:
-            imagebutton:
-
-                idle "button_bar_idle"
-                hover "button_bar_hover"
+            imagebutton auto "ab_suck_%s":
                 action Function(incrementTotal)
         else:
-            imagebutton:
-
-                idle "button_bar_idle"
-                hover "button_bar_hover"
+            imagebutton auto "ab_suck_%s":
                 action [Function(nullTotal), Jump("test_sex_with_bar_screen_label_2")]
 
 label test_sex_with_bar_screen_label_2:
@@ -50,15 +44,10 @@ screen test_sex_with_bar_screen_2:
             range 5
             xysize(25,200)
         if total < 5:
-            imagebutton:
-
-                idle "button_bar_idle"
-                hover "button_bar_hover"
+            imagebutton auto "ab_take_%s":
                 action Function(incrementTotal)
         else:
-            imagebutton:
-                idle "button_bar_idle"
-                hover "button_bar_hover"
+            imagebutton auto "ab_take_%s":
                 action [Function(nullTotal), Jump("test_sex_with_bar_screen_label_3")]
 
 label test_sex_with_bar_screen_label_3:
@@ -77,16 +66,10 @@ screen test_sex_with_bar_screen_3:
             range 5
             xysize(25,200)
         if total < 5:
-            imagebutton:
-
-                idle "button_bar_idle"
-                hover "button_bar_hover"
+            imagebutton auto "ab_enjoy_%s":
                 action Function(incrementTotal)
         else:
-            imagebutton:
-
-                idle "button_bar_idle"
-                hover "button_bar_hover"
+            imagebutton auto "ab_enjoy_%s":
                 action [Function(nullTotal), Jump("abstract_map_screen_label")]
 
 label test_sex_with_bar_screen_end_label:

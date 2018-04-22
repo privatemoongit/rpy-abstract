@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/test_sex_screen.rpy", line 3: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation.
-    if pc.energy < 1:
-    ^
+File "game/character/player_character_sheet.rpy", line 39: imagebutton expects a non-empty block.
+    imagebutton auto "cb_plus_%s":
+                                  ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Sat Apr 21 16:51:35 2018
+Sun Apr 22 12:52:48 2018

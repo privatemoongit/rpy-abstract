@@ -3,35 +3,36 @@ call screen abstract_map_screen
 
 screen abstract_map_screen:
     $pc.changePlace("abstract_map_screen_label")
-    image "img_player_map"
+    image "abstract_map"
 
     vbox:
         hbox:
             label "energy:"
             for i in range (0, pc.energy):
-                image "icon_cs_energie"
+                image "ci_energy_idle"
     imagebutton:
-        idle "icon_cs_map_home_idle"
-        hover "icon_cs_map_home_hover"
+        idle "mi_home_idle"
+        hover "mi_home_hover"
         action Jump("abstract_home")
         pos(540,240)
     imagebutton:
-        idle "icon_map_hostipal_idle"
-        hover "icon_map_hostipal_hover"
+        idle "mi_danjo_clinic_idle"
+        hover "mi_danjo_clinic_hover"
         action Jump("abstract_clinic")
         pos(520,375)
+    imagebutton:
+        idle "mi_toilets_idle"
+        hover "mi_toilets_hover"
+        action Jump("test_sex_with_bar_screen_label")
+        pos(700,500)
+
 #CHARACTER_SHEET
     imagebutton:
-        idle "button_bar_idle"
-        hover "button_bar_hover"
+        idle "mi_character_sheet_idle"
+        hover "mi_character_sheet_hover"
         action Jump("player_character_sheet_screen_label")
         pos(1200,50)
 
-    imagebutton:
-        idle "button_bar_idle"
-        hover "button_bar_hover"
-        action Jump("test_sex_with_bar_screen_label")
-        pos(700,500)
 
 
 label abstract_home:
@@ -40,7 +41,7 @@ label abstract_home:
     jump end_label
 
 label abstract_clinic:
-    scene bg img_player_map
+    scene bg abstract_map
     if pc.energy < 1:
         "You are to tired have to go home"
         jump abstract_map_screen_label
