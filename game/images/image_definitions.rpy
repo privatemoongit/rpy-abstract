@@ -1,5 +1,9 @@
-image mi_home_idle ="images/icons/mi_home_idle.png"
-image mi_home_hover = "images/icons/mi_home_hover.png"
+image var_1 = "/images/id_photo/var_1.png"
+
+image ml_energy = "images/labels/ml_energy.png"
+
+image home ="images/icons/mi_home_idle.png"
+image home = "images/icons/mi_home_hover.png"
 
 image mi_danjo_clinic_idle = "/images/icons/mi_danjo_clinic_idle.png"
 image mi_danjo_clinic_hover = "/images/icons/mi_danjo_clinic_hover.png"
@@ -39,7 +43,7 @@ image ab_enjoy_selected_hover = "/images/buttons/ab_enjoy_selected_hover.png"
 
 image img_bluescreen_background = "/images/backgrounds/bg_bluescreen.jpg"
 image img_greencreen_background = "/images/backgrounds/bg_greenscreen.jpg"
-image img_character_sheet_dna_bg = "/images/backgrounds/bg_character_sheet_background.jpg"
+image img_character_sheet_dna_bg = "/images/backgrounds/bg_cs.jpg"
 
 image abstract_map = "/images/map/map_map.png"
 image bg abstract_map = "abstract_map"

@@ -1,6 +1,9 @@
 label test_sex_with_bar_screen_label:
 scene bg abstract_map
-if pc.energy < 1:
+
+if pc.fromCH:
+    call screen test_sex_with_bar_screen
+elif pc.energy < 1:
     "You are to tired have to go home"
     jump abstract_map_screen_label
 else:
@@ -9,12 +12,14 @@ else:
     call screen test_sex_with_bar_screen
 
 screen test_sex_with_bar_screen:
+    $pc.place = "test_sex_with_bar_screen_label"
 
     if total % 2 == 1 :
         add "to_test_p1_1"
     elif total % 2 == 0:
         add "to_test_p1_2"
     vbox:
+        pos(1000,300)
         style "action_screen_bar"
         bar:
             bar_vertical True
@@ -27,6 +32,12 @@ screen test_sex_with_bar_screen:
         else:
             imagebutton auto "ab_suck_%s":
                 action [Function(nullTotal), Jump("test_sex_with_bar_screen_label_2")]
+    imagebutton:
+        idle "mi_character_sheet_idle"
+        hover "mi_character_sheet_hover"
+        action Jump("player_character_sheet_screen_label")
+        pos(1200,50)
+
 
 label test_sex_with_bar_screen_label_2:
 call screen test_sex_with_bar_screen_2

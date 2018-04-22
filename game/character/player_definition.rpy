@@ -24,7 +24,8 @@ init python:
             self.init_atributes()
             self.init_baiscs()
             self.init_skills()
-
+            self.variant = "var_1"
+            self.fromCH = False
         def init_atributes(self):
             self.level = self.default_level
             self.experiance = self.default_experiance

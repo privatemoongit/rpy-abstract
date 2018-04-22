@@ -2,19 +2,22 @@ label abstract_map_screen_label:
 call screen abstract_map_screen
 
 screen abstract_map_screen:
-    $pc.changePlace("abstract_map_screen_label")
+    $pc.fromCH = False
+    $pc.changePlace("home")
     image "abstract_map"
 
     vbox:
-        hbox:
-            label "energy:"
-            for i in range (0, pc.energy):
-                image "ci_energy_idle"
+        bar:
+            value pc.energy
+            range pc.max_energy
+            xysize(200, 25)
+
     imagebutton:
         idle "mi_home_idle"
         hover "mi_home_hover"
-        action Jump("abstract_home")
+        action Jump("home")
         pos(540,240)
+
     imagebutton:
         idle "mi_danjo_clinic_idle"
         hover "mi_danjo_clinic_hover"
@@ -33,8 +36,10 @@ screen abstract_map_screen:
         action Jump("player_character_sheet_screen_label")
         pos(1200,50)
 
-label abstract_home:
+label home:
     scene bg abstract_map
+    if "home" and pc.fromCH:
+        jump abstract_map_screen_label
     "It is Home."
     jump end_label
 
