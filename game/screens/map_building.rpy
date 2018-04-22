@@ -33,8 +33,6 @@ screen abstract_map_screen:
         action Jump("player_character_sheet_screen_label")
         pos(1200,50)
 
-
-
 label abstract_home:
     scene bg abstract_map
     "It is Home."

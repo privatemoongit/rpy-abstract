@@ -1,5 +1,5 @@
 label test_sex_with_bar_screen_label:
-scene bg img_player_map
+scene bg abstract_map
 if pc.energy < 1:
     "You are to tired have to go home"
     jump abstract_map_screen_label

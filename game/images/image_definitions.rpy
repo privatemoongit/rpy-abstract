@@ -39,7 +39,7 @@ image ab_enjoy_selected_hover = "/images/buttons/ab_enjoy_selected_hover.png"
 
 image img_bluescreen_background = "/images/backgrounds/bg_bluescreen.jpg"
 image img_greencreen_background = "/images/backgrounds/bg_greenscreen.jpg"
-image img_character_sheet_dna_bg = "/images/backgrounds/bg_dna_character_sheet.jpg"
+image img_character_sheet_dna_bg = "/images/backgrounds/bg_character_sheet_background.jpg"
 
 image abstract_map = "/images/map/map_map.png"
 image bg abstract_map = "abstract_map"
