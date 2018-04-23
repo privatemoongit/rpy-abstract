@@ -1,3 +1,4 @@
+default pc = Player()
 label start:
     scene bg img_bluescreen_background
     "LOGG:script.rpy: begin"

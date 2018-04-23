@@ -60,15 +60,6 @@ init python:
             self.max_energy += 1
             self.inc_skillpoints()
 
-        def inc_exp_10(self):
-            self.inc_experiance(10)
-
-        def inc_exp_50(self):
-            self.inc_experiance(50)
-
-        def inc_exp_100(self):
-            self.inc_experiance(100)
-
         def inc_experiance(self, ammount):
             self.experiance += ammount
             while self.experiance >= 100:
@@ -159,6 +150,45 @@ init python:
             else:
                 return False
 
+    class Sub_scene_variables:
+        def __init__(self):
+            self.sub_scene_index_1 = 0
+            self.sub_scene_index_2 = 0
+            self.sub_scene_index_3 = 0
+            self.sub_scene_index_4 = 0
+            self.sub_scene_index_5 = 0
+
+            self.sub_scene_index_max_1 = 0
+            self.sub_scene_index_max_2 = 0
+            self.sub_scene_index_max_3 = 0
+            self.sub_scene_index_max_4 = 0
+            self.sub_scene_index_max_5 = 0
+
+        def inc_sub_scene_index_1(self):
+            self.sub_scene_index_1 += 1
+        def null_sub_scene_index_1(self):
+            self.sub_scene_index_1 -= self.sub_scene_index_1
+
+        def inc_sub_scene_index_2(self):
+            self.sub_scene_index_2 += 1
+        def null_sub_scene_index_2(self):
+            self.sub_scene_index_2 -= self.sub_scene_index_2
+
+        def inc_sub_scene_index_3(self):
+            self.sub_scene_index_3 += 1
+        def null_sub_scene_index_3(self):
+            self.sub_scene_index_3 -= self.sub_scene_index_3
+
+        def inc_sub_scene_index_4(self):
+            self.sub_scene_index_4 += 1
+        def null_sub_scene_index_4(self):
+            self.sub_scene_index_4 -= self.sub_scene_index_4
+
+        def inc_sub_scene_index_5(self):
+            self.sub_scene_index_5 += 1
+        def null_sub_scene_index_5(self):
+            self.sub_scene_index_5 -= self.sub_scene_index_5
+
     class Consumable:
         def __init__(self, img, name, ammount):
             self.img = img
@@ -168,5 +198,3 @@ init python:
         def use(self, target):
             target.inventory.remove(self)
             target.re_energy(self.ammount)
-            #global selected_item
-            #selected_item = None

@@ -1,4 +1,4 @@
-Mon Apr 23 13:14:14 2018
+Mon Apr 23 15:56:57 2018
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
  
@@ -7,7 +7,7 @@ Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.11s
+Loading script took 0.10s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -21,15 +21,15 @@ Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.02s
 DPI scale factor: 1.000000
-Creating interface object took 0.03s
+Creating interface object took 0.06s
 Cleaning stores took 0.00s
 Init translation took 0.03s
-Build styles took 0.01s
+Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.07s
+Save screen analysis took 0.06s
 Prepare screens took 0.06s
-Save pyanalysis. took 0.19s
+Save pyanalysis. took 0.20s
 Save bytecode. took 0.05s
 Running _start took 0.00s
 Performance test:
@@ -297,11 +297,59 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 1.03125309944s
+Total time until interface ready: 1.04412102699s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.004502 seconds.
-- Frame drawn at 0.007841 seconds.
-- Frame drawn at 0.010843 seconds.
-- Frame drawn at 0.013346 seconds.
-- 0.013346 seconds to render 5 frames.
+- Frame drawn at 0.005927 seconds.
+- Frame drawn at 0.010102 seconds.
+- Frame drawn at 0.021881 seconds.
+- Frame drawn at 0.040044 seconds.
+- 0.040044 seconds to render 5 frames.
+
+Full traceback:
+  File "game/screens/map_screen/map_building.rpy", line 2, in script
+    call screen abstract_map_screen
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/ast.py", line 1828, in execute
+    self.call("execute")
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/ast.py", line 1816, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/statements.py", line 177, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 519, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/exports.py", line 2664, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2635, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3437, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 689, in event
+    rv = self.child.event(ev, x, y, st)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/behavior.py", line 906, in event
+    return handle_click(self.clicked)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/behavior.py", line 841, in handle_click
+    rv = run(action)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/behavior.py", line 308, in run
+    new_rv = run(i, *args, **kwargs)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/behavior.py", line 315, in run
+    return action(*args, **kwargs)
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/curry.py", line 38, in __call__
+    **dict(self.kwargs.items() + kwargs.items()))
+TypeError: Fade() takes at least 3 arguments (1 given)
+
+While running game code:
+  File "game/screens/map_screen/map_building.rpy", line 2, in script
+    call screen abstract_map_screen
+  File "renpy/common/000statements.rpy", line 519, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+TypeError: Fade() takes at least 3 arguments (1 given)

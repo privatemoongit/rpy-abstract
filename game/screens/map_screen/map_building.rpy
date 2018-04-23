@@ -21,7 +21,7 @@ screen abstract_map_screen:
     imagebutton:
         idle "mi_danjo_clinic_idle"
         hover "mi_danjo_clinic_hover"
-        action [Function(pc.inc_exp_100), Jump("abstract_clinic")]
+        action [Jump("abstract_clinic")]
         pos(520,375)
     imagebutton:
         idle "mi_toilets_idle"
@@ -42,8 +42,10 @@ label home:
     scene bg abstract_map
     if "home" and pc.fromCH:
         jump abstract_map_screen_label
-    "It is Home."
-    jump end_label
+    else:
+        $pc.re_energy(3)
+        "It is Home."
+        jump abstract_map_screen_label
 
 label abstract_clinic:
     scene bg abstract_map
@@ -52,6 +54,7 @@ label abstract_clinic:
         jump abstract_map_screen_label
     else:
         "It is the clinic"
+        $pc.inc_experiance(100)
         $pc.dec_energy(1)
         $pc.variant = "var_2"
         jump abstract_map_screen_label

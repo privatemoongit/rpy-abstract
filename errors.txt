@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/screens/test_as_ref.rpy", line 108: expected statement.
-    sub_scene_index_2_sub_screen:
-                                ^
+File "game/screens/map_screen/map_building.rpy", line 43: invalid syntax
+    .pc.re_energy(3)
+     ^
+    
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Mon Apr 23 13:09:02 2018
+Mon Apr 23 15:39:36 2018
