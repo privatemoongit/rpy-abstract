@@ -1,7 +1,7 @@
 init python:
     class Player:
         default_level = 1
-        default_experiance = 200
+        default_experiance = 0
         default_energy = 3
         default_willpower = 1
         default_morals = 5
@@ -11,7 +11,7 @@ init python:
         default_place = "abstract_map_screen_label"
         default_inventory = []
 
-        default_skillpoints = 2
+        default_skillpoints = 0
 
         default_computers = 1
         default_fittness = 0
@@ -26,6 +26,7 @@ init python:
             self.init_skills()
             self.variant = "var_1"
             self.fromCH = False
+
         def init_atributes(self):
             self.level = self.default_level
             self.experiance = self.default_experiance
@@ -58,6 +59,15 @@ init python:
         def level_up(self):
             self.max_energy += 1
             self.inc_skillpoints()
+
+        def inc_exp_10(self):
+            self.inc_experiance(10)
+
+        def inc_exp_50(self):
+            self.inc_experiance(50)
+
+        def inc_exp_100(self):
+            self.inc_experiance(100)
 
         def inc_experiance(self, ammount):
             self.experiance += ammount

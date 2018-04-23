@@ -1,3 +1,5 @@
+image mi_level_up_marker = "/images/icons/mi_level_up_marker_alien.png"
+
 image var_1 = "/images/id_photo/var_1.png"
 
 image ml_energy = "images/labels/ml_energy.png"

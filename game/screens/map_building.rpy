@@ -21,13 +21,8 @@ screen abstract_map_screen:
     imagebutton:
         idle "mi_danjo_clinic_idle"
         hover "mi_danjo_clinic_hover"
-        action [Dissolve("abstract_map_screen"), Jump("abstract_clinic")]
+        action [Function(pc.inc_exp_100), Jump("abstract_clinic")]
         pos(520,375)
-    imagebutton:
-        idle "mi_toilets_idle"
-        hover "mi_toilets_hover"
-        action [Dissolve("abstract_map_screen"), Jump("test_sex_with_bar_screen_label")]
-        pos(700,500)
     imagebutton:
         idle "mi_toilets_idle"
         hover "mi_toilets_hover"
@@ -35,7 +30,10 @@ screen abstract_map_screen:
         pos(200,400)
 #CHARACTER_SHEET
     imagebutton:
-        idle "mi_character_sheet_idle"
+        if pc.skillpoints > 0 :
+            idle "mi_level_up_marker"
+        else:
+            idle "mi_character_sheet_idle"
         hover "mi_character_sheet_hover"
         action [Dissolve("abstract_map_screen"), Jump("player_character_sheet_screen_label")]
         pos(1200,50)
