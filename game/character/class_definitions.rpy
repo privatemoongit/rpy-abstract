@@ -24,8 +24,10 @@ init python:
             self.init_atributes()
             self.init_baiscs()
             self.init_skills()
+
             self.variant = "var_1"
-            self.fromCH = False
+            self.is_woman = False
+            self.from_cs = False
 
         def init_atributes(self):
             self.level = self.default_level

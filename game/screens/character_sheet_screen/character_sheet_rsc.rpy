@@ -13,3 +13,7 @@ image cb_back_selected_idle = "/images/buttons/cb_back_selected_idle.png"
 image cb_back_selected_hover = "/images/buttons/cb_back_selected_hover.png"
 
 image img_character_sheet_dna_bg = "/images/backgrounds/bg_cs.jpg"
+
+image smartphone = "/images/cs/smartphone.jpg"
+image contacts = "/images/cs/contacts.png"
+image microblog = "/images/cs/microblog.png"

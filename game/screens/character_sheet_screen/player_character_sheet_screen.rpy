@@ -2,7 +2,7 @@ label player_character_sheet_screen_label:
 call screen player_character_sheet_screen
 
 screen player_character_sheet_screen:
-    $pc.fromCH = True
+    $pc.from_cs = True
     add "img_character_sheet_dna_bg"
     image "[pc.variant]":
         pos(50,20)
@@ -57,6 +57,17 @@ screen player_character_sheet_screen:
             textbutton "speech [pc.speech]"
             if pc.skillpoints > 0 and pc.place == "home":
                 textbutton "+" action Function(pc.inc_speech)
+    hbox:
+        pos(1160, 20)
+        spacing 20
+        imagebutton:
+            idle "microblog"
+            action Jump("journal_label")
+        imagebutton:
+            idle  "contacts"
+            action Jump("contacts_label")
+
+
     imagebutton auto "cb_back_%s":
         pos(1100,600)
         action [Dissolve("player_character_sheet_screen"),Jump(pc.place)]

@@ -2,7 +2,7 @@ label abstract_map_screen_label:
 call screen abstract_map_screen
 
 screen abstract_map_screen:
-    $pc.fromCH = False
+    $pc.from_cs = False
     $pc.changePlace("home")
     image "abstract_map"
 
@@ -40,7 +40,7 @@ screen abstract_map_screen:
 
 label home:
     scene bg abstract_map
-    if "home" and pc.fromCH:
+    if "home" and pc.from_cs:
         jump abstract_map_screen_label
     else:
         $pc.re_energy(3)
