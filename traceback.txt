@@ -1,25 +1,27 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/screens/map_building.rpy", line 2, in script
-    call screen abstract_map_screen
+While loading <'Image' u'/images/buttons/ab_take_selected_hover.png'>:
+  File "game/screens/test_as_ref.rpy", line 15, in script
+    default test_as = Sub_scene_variables()
   File "renpy/common/000statements.rpy", line 519, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/screens/map_building.rpy", line 4, in execute
-    screen abstract_map_screen:
-  File "game/screens/map_building.rpy", line 4, in execute
-    screen abstract_map_screen:
-  File "game/screens/map_building.rpy", line 15, in execute
-    imagebutton:
-  File "game/screens/map_building.rpy", line 15, in keywords
-    imagebutton:
-NameError: name 'abstract_map_screen' is not defined
+  File "game/screens/test_as_ref.rpy", line 17, in execute
+    $test_as.sub_scene_index_max_2 = 3
+  File "game/screens/test_as_ref.rpy", line 17, in execute
+    $test_as.sub_scene_index_max_2 = 3
+  File "game/screens/test_as_ref.rpy", line 20, in execute
+    if test_as.sub_scene_index_1 % 2 == 1 :
+  File "game/screens/test_as_ref.rpy", line 70, in execute
+    action [Function(test_as.null_sub_index_1), Function(null_sub_index_2), Function(null_sub_index_3), Dissolve("test_as"), Jump("abstract_map_screen_label")]
+  File "game/screens/test_as_ref.rpy", line 70, in keywords
+    action [Function(test_as.null_sub_index_1), Function(null_sub_index_2), Function(null_sub_index_3), Dissolve("test_as"), Jump("abstract_map_screen_label")]
+AttributeError: 'Sub_scene_variables' object has no attribute 'null_sub_index_1'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/screens/map_building.rpy", line 2, in script
-    call screen abstract_map_screen
+  File "game/screens/test_as_ref.rpy", line 15, in script
+    default test_as = Sub_scene_variables()
   File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1828, in execute
     self.call("execute")
   File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1816, in call
@@ -50,18 +52,20 @@ Full traceback:
     self.update()
   File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 611, in update
     self.screen.function(**self.scope)
-  File "game/screens/map_building.rpy", line 4, in execute
-    screen abstract_map_screen:
-  File "game/screens/map_building.rpy", line 4, in execute
-    screen abstract_map_screen:
-  File "game/screens/map_building.rpy", line 15, in execute
-    imagebutton:
-  File "game/screens/map_building.rpy", line 15, in keywords
-    imagebutton:
-  File "<screen language>", line 18, in <module>
-NameError: name 'abstract_map_screen' is not defined
+  File "game/screens/test_as_ref.rpy", line 17, in execute
+    $test_as.sub_scene_index_max_2 = 3
+  File "game/screens/test_as_ref.rpy", line 17, in execute
+    $test_as.sub_scene_index_max_2 = 3
+  File "game/screens/test_as_ref.rpy", line 20, in execute
+    if test_as.sub_scene_index_1 % 2 == 1 :
+  File "game/screens/test_as_ref.rpy", line 70, in execute
+    action [Function(test_as.null_sub_index_1), Function(null_sub_index_2), Function(null_sub_index_3), Dissolve("test_as"), Jump("abstract_map_screen_label")]
+  File "game/screens/test_as_ref.rpy", line 70, in keywords
+    action [Function(test_as.null_sub_index_1), Function(null_sub_index_2), Function(null_sub_index_3), Dissolve("test_as"), Jump("abstract_map_screen_label")]
+  File "<screen language>", line 71, in <module>
+AttributeError: 'Sub_scene_variables' object has no attribute 'null_sub_index_1'
 
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
 abstract 1.0
-Mon Apr 23 08:11:08 2018
+Mon Apr 23 09:11:29 2018

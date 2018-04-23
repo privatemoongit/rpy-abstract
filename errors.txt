@@ -2,7 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/python/variables.rpy", line 29: indentation mismatch.
+File "game/screens/test_as_ref.rpy", line 33: is not terminated with a newline. (Check strings and parenthesis.)
+                    action Function(test_as.inc_sub_index_1
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Mon Apr 23 08:19:36 2018
+Mon Apr 23 09:09:54 2018
