@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/screens/test_sex_screen.rpy", line 10: expected ':' not found.
-    label toilet_label
-                      ^
+File "game/python/variables.rpy", line 29: indentation mismatch.
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Sun Apr 22 22:10:15 2018
+Mon Apr 23 08:19:36 2018

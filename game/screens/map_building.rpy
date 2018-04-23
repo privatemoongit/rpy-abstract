@@ -15,25 +15,29 @@ screen abstract_map_screen:
     imagebutton:
         idle "mi_home_idle"
         hover "mi_home_hover"
-        action Jump("home")
+        action [Dissolve("abstract_map_screen"), Jump("home") ]
         pos(540,240)
 
     imagebutton:
         idle "mi_danjo_clinic_idle"
         hover "mi_danjo_clinic_hover"
-        action Jump("abstract_clinic")
+        action [Dissolve("abstract_map_screen"), Jump("abstract_clinic")]
         pos(520,375)
     imagebutton:
         idle "mi_toilets_idle"
         hover "mi_toilets_hover"
-        action Jump("test_sex_with_bar_screen_label")
+        action [Dissolve("abstract_map_screen"), Jump("test_sex_with_bar_screen_label")]
         pos(700,500)
-
+    imagebutton:
+        idle "mi_toilets_idle"
+        hover "mi_toilets_hover"
+        action [Dissolve("abstract_map_screen"), Jump("test_as_reflabel")]
+        pos(200,400)
 #CHARACTER_SHEET
     imagebutton:
         idle "mi_character_sheet_idle"
         hover "mi_character_sheet_hover"
-        action Jump("player_character_sheet_screen_label")
+        action [Dissolve("abstract_map_screen"), Jump("player_character_sheet_screen_label")]
         pos(1200,50)
 
 label home:

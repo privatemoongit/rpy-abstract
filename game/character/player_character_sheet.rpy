@@ -59,4 +59,4 @@ screen player_character_sheet_screen:
                 textbutton "+" action Function(pc.inc_speech)
     imagebutton auto "cb_back_%s":
         pos(1100,600)
-        action Jump(pc.place)
+        action [Dissolve("player_character_sheet_screen"),Jump(pc.place)]
