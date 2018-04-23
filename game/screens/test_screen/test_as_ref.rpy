@@ -1,7 +1,7 @@
 label test_as_reflabel:
 scene bg abstract_map
 #Check if pc comming back from the ch
-if pc.fromCH:
+if pc.from_cs:
     call screen test_as
 #check if the pchave the energy to perform the scene
 elif pc.energy < 1:
@@ -112,7 +112,7 @@ screen test_as:
 label sub_scene_index_2_sub_label:
 call screen sub_scene_index_2_sub_screen
 screen sub_scene_index_2_sub_screen:
-    $pc.fromCH = True
+    $pc.from_cs = True
     image "abstract_map"
     vbox:
         pos(600,350)

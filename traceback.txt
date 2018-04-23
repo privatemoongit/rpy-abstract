@@ -1,50 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 188, in script
-    python:
-  File "renpy/common/00start.rpy", line 189, in <module>
-    renpy.execute_default_statement(True)
-  File "game/script.rpy", line 1, in set_default
-    default pc = Player()
-  File "game/script.rpy", line 1, in <module>
-    default pc = Player()
-  File "game/character/class_definitions.rpy", line 29, in __init__
-    self.variant = default_variant
-NameError: global name 'default_variant' is not defined
+  File "game/screens/test_screen/test_as_ref.rpy", line 4, in script
+    if pc.fromCH:
+  File "game/screens/test_screen/test_as_ref.rpy", line 4, in <module>
+    if pc.fromCH:
+AttributeError: 'Player' object has no attribute 'fromCH'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/bootstrap.py", line 306, in bootstrap
-    renpy.main.main()
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/main.py", line 513, in main
-    run(restart)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/main.py", line 139, in run
-    renpy.execution.run_context(True)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/execution.py", line 846, in run_context
-    context.run()
-  File "renpy/common/00start.rpy", line 188, in script
-    python:
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/ast.py", line 862, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/python.py", line 1888, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00start.rpy", line 189, in <module>
-    renpy.execute_default_statement(True)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/exports.py", line 3243, in execute_default_statement
-    i.set_default(start)
-  File "game/script.rpy", line 1, in set_default
-    default pc = Player()
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/python.py", line 1912, in py_eval_bytecode
+  File "game/screens/test_screen/test_as_ref.rpy", line 4, in script
+    if pc.fromCH:
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1729, in execute
+    if renpy.python.py_eval(condition):
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/python.py", line 1919, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/python.py", line 1912, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 1, in <module>
-    default pc = Player()
-  File "game/character/class_definitions.rpy", line 29, in __init__
-    self.variant = default_variant
-NameError: global name 'default_variant' is not defined
+  File "game/screens/test_screen/test_as_ref.rpy", line 4, in <module>
+    if pc.fromCH:
+AttributeError: 'Player' object has no attribute 'fromCH'
 
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
 abstract 1.0
-Mon Apr 23 17:22:04 2018
+Mon Apr 23 18:22:46 2018
