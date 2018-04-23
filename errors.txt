@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/character/player_definition.rpy", line 63: invalid syntax
-            toad = (int)ammount
-                               ^
-    
+File "game/screens/test_as_ref.rpy", line 108: expected statement.
+    sub_scene_index_2_sub_screen:
+                                ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Mon Apr 23 11:55:50 2018
+Mon Apr 23 13:09:02 2018

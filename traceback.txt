@@ -1,62 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/screens/map_building.rpy", line 2, in script
-    call screen abstract_map_screen
-  File "renpy/common/000statements.rpy", line 519, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "renpy/common/00action_other.rpy", line 506, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-  File "game/character/player_definition.rpy", line 63, in inc_exp_100
-    inc_experiance(100)
-NameError: global name 'inc_experiance' is not defined
+  File "game/screens/test_as_ref.rpy", line 107, in script call
+    call sub_scene_index_2_sub_screen
+  File "game/screens/test_as_ref.rpy", line 107, in script call
+    call sub_scene_index_2_sub_screen
+ScriptError: could not find label 'sub_scene_index_2_sub_screen'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/screens/map_building.rpy", line 2, in script
-    call screen abstract_map_screen
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/ast.py", line 1828, in execute
-    self.call("execute")
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/ast.py", line 1816, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/statements.py", line 177, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 519, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/exports.py", line 2664, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2635, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3437, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 689, in event
-    rv = self.child.event(ev, x, y, st)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 992, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/behavior.py", line 906, in event
-    return handle_click(self.clicked)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/behavior.py", line 841, in handle_click
-    rv = run(action)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/behavior.py", line 308, in run
-    new_rv = run(i, *args, **kwargs)
-  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/display/behavior.py", line 315, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00action_other.rpy", line 506, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-  File "game/character/player_definition.rpy", line 63, in inc_exp_100
-    inc_experiance(100)
-NameError: global name 'inc_experiance' is not defined
+  File "game/screens/test_as_ref.rpy", line 107, in script call
+    call sub_scene_index_2_sub_screen
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/ast.py", line 1384, in execute
+    rv = renpy.game.context().call(label, return_site=self.next.name)
+  File "game/screens/test_as_ref.rpy", line 107, in script call
+    call sub_scene_index_2_sub_screen
+  File "/home/account/Python/renpy-6.99.14.3-sdk/renpy/script.py", line 873, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'sub_scene_index_2_sub_screen'.
 
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
 abstract 1.0
-Mon Apr 23 12:18:37 2018
+Mon Apr 23 13:10:05 2018

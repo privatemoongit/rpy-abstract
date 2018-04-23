@@ -53,4 +53,5 @@ label abstract_clinic:
     else:
         "It is the clinic"
         $pc.dec_energy(1)
+        $pc.variant = "var_2"
         jump abstract_map_screen_label
