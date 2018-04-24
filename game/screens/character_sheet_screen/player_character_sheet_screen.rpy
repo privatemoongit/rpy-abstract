@@ -1,13 +1,3 @@
-default inventory = []
-default selected_item = None
-image square = "images/square.png"
-
-style slot:
-    background Frame("square", 0, 0)
-    minimum(75,75)
-    maximum(75,75)
-    xalign 0.5
-
 label player_character_sheet_screen_label:
 call screen player_character_sheet_screen
 
@@ -81,11 +71,11 @@ screen player_character_sheet_screen:
     grid 5 5:
         pos(100, 300)
         spacing 5
-        for Consumable in inventory:
-            frame:
-                style "slot"
-                imagebutton idle Consumable.img action SetVariable("selected_item", Consumable)
-        for i in range(len(inventory), 25):
+        for item in pc.inventory:
+                imagebutton:
+                    idle item.img
+                    action Function(item.use(pc))
+        for i in range(len(pc.inventory), 25):
             frame:
                 style "slot"
 

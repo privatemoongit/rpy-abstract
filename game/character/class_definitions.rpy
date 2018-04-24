@@ -52,6 +52,8 @@ init python:
             self.sneak = self.default_sneak
             self.speech = self.default_speech
 
+        def add_item(self, item):
+            self.inventory.append(item)
         def getPlace(self):
             return self.place
 
@@ -192,11 +194,12 @@ init python:
             self.sub_scene_index_5 -= self.sub_scene_index_5
 
     class Consumable:
-        def __init__(self, img, name, ammount):
+        def __init__(self, img, name, ammount, quantity):
             self.img = img
             self.name = name
             self.ammount = ammount
+            self.quantity = quantity
 
         def use(self, target):
-            target.inventory.remove(self)
             target.re_energy(self.ammount)
+            #target.inventory.remove(self)
