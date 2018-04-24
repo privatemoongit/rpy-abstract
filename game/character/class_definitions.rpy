@@ -110,11 +110,10 @@ init python:
                 self.speech +=1
 
         def re_energy(self, ammount):
-            if self.max_energy - self.energy - ammount >= 0:
-                self.energy += ammount
-            else:
+            self.energy += ammount
+            if self.energy > self.max_energy:
                 self.energy = self.max_energy
-
+                
         def dec_energy(self, ammount):
             self.energy -= ammount
             if self.energy > 0:
@@ -202,4 +201,3 @@ init python:
 
         def use(self, target):
             target.re_energy(self.ammount)
-            #target.inventory.remove(self)

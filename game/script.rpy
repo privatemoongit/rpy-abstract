@@ -1,7 +1,7 @@
 default pc = Player()
 image pie = "images/consumable.png"
 default pie_item = Consumable("pie", "pie", 1, 1)
-default selected_item = None
+default selected_item = Consumable("square", "", 0, 0)
 image square = "images/square.png"
 style slot:
     background Frame("square", 0, 0)

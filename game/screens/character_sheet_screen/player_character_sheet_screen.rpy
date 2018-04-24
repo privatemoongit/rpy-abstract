@@ -57,24 +57,27 @@ screen player_character_sheet_screen:
             textbutton "speech [pc.speech]"
             if pc.skillpoints > 0 and pc.place == "home":
                 textbutton "+" action Function(pc.inc_speech)
-    hbox:
+    vbox:
         pos(1160, 20)
         spacing 20
-        image "[pie_item.img]"
-        imagebutton:
-            idle "microblog"
-            action Jump("journal_label")
-        imagebutton:
-            idle  "contacts"
-            action Jump("contacts_label")
+        frame:
+            style "slot"
+            imagebutton:
+                idle selected_item.img
+                action Jump("journal_label")
+        hbox:
+            imagebutton:
+                idle "microblog"
+                action Jump("journal_label")
+            imagebutton:
+                idle  "contacts"
+                action Jump("contacts_label")
 #INVENTORY
     grid 5 5:
         pos(100, 300)
         spacing 5
         for item in pc.inventory:
-                imagebutton:
-                    idle item.img
-                    action Function(item.use(pc))
+            imagebutton idle item.img action [Function(pc.inc_speech), Function(item.use,pc), RemoveFromSet(pc.inventory, item)]
         for i in range(len(pc.inventory), 25):
             frame:
                 style "slot"
