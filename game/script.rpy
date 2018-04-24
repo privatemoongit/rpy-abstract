@@ -1,4 +1,9 @@
 default pc = Player()
+image pie = "images/consumable.png"
+defualt pie_item = Consumable("pie", 50, 100)
+
+$inventory.append(pie_item)
+
 label start:
     scene bg img_bluescreen_background
     "LOGG:script.rpy: begin"

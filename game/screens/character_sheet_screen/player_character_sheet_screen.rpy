@@ -1,14 +1,11 @@
 default inventory = []
 default selected_item = None
-image pie = "images/consumable.png"
-
-$ pie_item = Consumable("pie", 50, 100)
-$inventory.append(pie_item)
+image square = "images/square.png"
 
 style slot:
     background Frame("square", 0, 0)
-    minimum(80,80)
-    maximum(80,80)
+    minimum(75,75)
+    maximum(75,75)
     xalign 0.5
 
 label player_character_sheet_screen_label:
@@ -73,6 +70,7 @@ screen player_character_sheet_screen:
     hbox:
         pos(1160, 20)
         spacing 20
+        image "[pie_item.img]"
         imagebutton:
             idle "microblog"
             action Jump("journal_label")
@@ -81,12 +79,12 @@ screen player_character_sheet_screen:
             action Jump("contacts_label")
 #INVENTORY
     grid 5 5:
-        pos(20, 300)
+        pos(100, 300)
         spacing 5
-        for item in inventory:
+        for Consumable in inventory:
             frame:
                 style "slot"
-                imagebutton idle item.img action SetVariable("selected_item", item)
+                imagebutton idle Consumable.img action SetVariable("selected_item", Consumable)
         for i in range(len(inventory), 25):
             frame:
                 style "slot"
