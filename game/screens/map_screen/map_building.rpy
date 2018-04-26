@@ -11,6 +11,11 @@ screen abstract_map_screen:
             value pc.energy
             range pc.max_energy
             xysize(200, 25)
+    imagebutton:
+        idle "dd_map_icon_idle"
+        hover "dd_map_icon_hovere"
+        action [Dissolve("abstract_map_screen"), Jump("drag_and_drop_label") ]
+        pos(340,440)
 
     imagebutton:
         idle "mi_home_idle"

@@ -18,7 +18,7 @@ label start:
     #jump abstract_map_screen_label
     $pc.add_item(pie_item)
     "[pc.inventory]"
-    jump player_character_sheet_screen_label
+    jump abstract_map_screen_label
     label end_label:
 
     "LOGG:script.rpy: end_label [pc.place] [pc.energy]"

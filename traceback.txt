@@ -1,29 +1,23 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 2, in script
-    call screen player_character_sheet_screen
+  File "game/screens/draganddrop/drag_and_drop.rpy", line 71, in script
+    call screen drag_and_drop_screen
   File "renpy/common/000statements.rpy", line 519, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 4, in execute
-    screen player_character_sheet_screen:
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 4, in execute
-    screen player_character_sheet_screen:
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 77, in execute
-    grid 5 5:
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 80, in execute
-    for item in pc.inventory:
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 81, in execute
-    imagebutton idle item.img action [Function(pc.inc_speech), Function(item.use,pc), RemoveFromSet(inventory, item)]
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 81, in keywords
-    imagebutton idle item.img action [Function(pc.inc_speech), Function(item.use,pc), RemoveFromSet(inventory, item)]
-NameError: name 'inventory' is not defined
+  File "game/screens/draganddrop/drag_and_drop.rpy", line 34, in execute
+    screen drag_and_drop_screen:
+  File "game/screens/draganddrop/drag_and_drop.rpy", line 34, in execute
+    screen drag_and_drop_screen:
+  File "game/screens/draganddrop/drag_and_drop.rpy", line 63, in execute
+    imagebutton:
+Exception: Imagebutton does not have a idle image.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 2, in script
-    call screen player_character_sheet_screen
+  File "game/screens/draganddrop/drag_and_drop.rpy", line 71, in script
+    call screen drag_and_drop_screen
   File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1828, in execute
     self.call("execute")
   File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1816, in call
@@ -54,22 +48,19 @@ Full traceback:
     self.update()
   File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 611, in update
     self.screen.function(**self.scope)
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 4, in execute
-    screen player_character_sheet_screen:
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 4, in execute
-    screen player_character_sheet_screen:
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 77, in execute
-    grid 5 5:
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 80, in execute
-    for item in pc.inventory:
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 81, in execute
-    imagebutton idle item.img action [Function(pc.inc_speech), Function(item.use,pc), RemoveFromSet(inventory, item)]
-  File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 81, in keywords
-    imagebutton idle item.img action [Function(pc.inc_speech), Function(item.use,pc), RemoveFromSet(inventory, item)]
-  File "<screen language>", line 81, in <module>
-NameError: name 'inventory' is not defined
+  File "game/screens/draganddrop/drag_and_drop.rpy", line 34, in execute
+    screen drag_and_drop_screen:
+  File "game/screens/draganddrop/drag_and_drop.rpy", line 34, in execute
+    screen drag_and_drop_screen:
+  File "game/screens/draganddrop/drag_and_drop.rpy", line 63, in execute
+    imagebutton:
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ui.py", line 927, in _imagebutton
+    idle = choice(idle, idle_image, "idle", required=True)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ui.py", line 923, in choice
+    raise Exception("Imagebutton does not have a %s image." % (name, ))
+Exception: Imagebutton does not have a idle image.
 
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
 abstract 1.0
-Tue Apr 24 18:17:52 2018
+Thu Apr 26 07:17:14 2018

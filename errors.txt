@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/character_sheet_screen/player_character_sheet_screen.rpy", line 81: u'pie_item' is not a keyword argument or valid child for the for statement.
-    pie_item.img
-            ^
+File "game/screens/draganddrop/drag_and_drop.rpy", line 69: expected statement.
+    imagebutton:
+               ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Tue Apr 24 18:06:02 2018
+Thu Apr 26 07:19:25 2018
